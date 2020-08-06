@@ -3,7 +3,7 @@
 ## Author: Nathan Bowdish
 ## Email:  djnatronic@gmail.com
 
-This app will allow you to create and delete notes<br/>
+This app will allow you to create and track workouts<br/>
 
 ### Technologies Used
 Mongo<br/>
