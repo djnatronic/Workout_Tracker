@@ -13,6 +13,7 @@ var PORT = process.env.PORT || 3000;
 
 // Requiring our models for syncing
 var db = require("./models");
+let mongoose = require("mongoose");
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -20,6 +21,11 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
 // Routes
 // =============================================================
