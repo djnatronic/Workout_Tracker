@@ -9,7 +9,7 @@ var express = require("express");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 80;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -22,7 +22,7 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/nathanbworkouttracker", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
